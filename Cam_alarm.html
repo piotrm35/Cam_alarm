@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="author" content="Piotr Michałowski">
+		<meta name="email" content="piotrm35@hotmail.com">
+		<meta name="license" content="GNU General Public License version 3">
+		<title>Cam_alarm</title>
+		<link rel="stylesheet" href="./css/Cam_alarm.css" type="text/css" />
+		<!-- <script src="./lib/opencv.js" type="text/javascript"></script> -->
+		<script src="https://docs.opencv.org/master/opencv.js" type="text/javascript"></script>
+		<script src="./js/Cam_alarm.js" type="text/javascript"></script>
+	</head>
+	
+	<body onload="init()">
+		<div id="container">
+			<div id="top_panel" class="top_and_bottom_panel">
+			</div>
+			<div id="left_panel" class="side_panel">
+				<table>
+					<tr>
+						<td>ROI margin:</td>
+						<td><input id="roi_margin" type="number" min="0" max="200" step="1" value="10"/>px</td>
+					</tr>
+					<tr>
+						<td>alarm threshold:</td>
+						<td><input id="alarm_threshold" type="number" min="0" max="100" step="1" value="80"/>%</td>
+					</tr>
+					<tr>
+						<td>similarity:</td>
+						<td><div id="similarity_panel"></div></td>
+					</tr>
+				</table>
+				<button onclick="clear_template_and_alarm()" >clear template and alarm</button>
+			</div>
+			<div id="main_panel">
+				<video autoplay="true" id="video_input" class="v_input"></video>
+				<canvas id="main_canvas" class="v_input"></canvas>
+				<canvas id="roi_canvas" class="aux_canvas"></canvas>
+			</div>
+			<div id="right_panel" class="side_panel">
+				<div id="aux_content">
+					<canvas id="template_canvas" class="aux_canvas"></canvas>
+				</div>
+				<div id="mini_manual">
+					How to start work:<br />
+					Mark on camera view a rectangle to proofe. When "similarity" will get fall beneath chosen "alarm threshold" the alam is turned on.<br />
+					<br />
+					Markings on the camera view:<br />
+					Blue rectangle - Your marked rectangle (a template to find).<br />
+					Green rectangle - ROI (region of interest) - a region of camera view in which the check will be carry out.<br />
+					Red rectangle - a place where the best match was found.<br />
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+			<div id="bottom_panel" class="top_and_bottom_panel">
+			</div>
+		</div>
+	</body>
+</html>

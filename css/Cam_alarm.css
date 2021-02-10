@@ -1,0 +1,135 @@
+body
+{
+	font-family: Arial;
+	text-align: center;
+	color: black;
+	font-size: 15px;
+}
+button
+{
+	background-color: #0080C0;
+	border: 2px solid black;
+	border-radius: 4px;
+	margin-top: 5px;
+	color: black;
+	width: 190px;
+}
+button:hover
+{
+	border: 2px solid #0080C0;
+}
+input
+{
+	width: 45px;
+	border: 2px solid black;
+	border-radius: 4px;
+	max-width: 160px;
+	margin-left: 5px;
+	margin-right: 2px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+table
+{
+	text-align: left;
+}
+
+.v_input
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 640px;
+	height: 480px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.top_and_bottom_panel
+{
+	width: 1040px;
+	height: 25px;
+	background-color: #0080C0;
+}
+.side_panel
+{
+	float: left;
+	width: 198px;
+	height: 500px;
+	border-left: 1px solid #0080C0;
+	border-right: 1px solid #0080C0;
+}
+.aux_canvas
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#container
+{
+	width: 1040px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: lightgray;
+	border: 2px solid #0080C0;
+}
+#top_panel
+{
+	font-size: 20px;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+#main_panel
+{
+	float: left;
+	position: relative;
+	width: 640px;
+	height: 500px;
+}
+#bottom_panel
+{
+	padding-top: 10px;
+}
+#video_input
+{
+	display: block;
+}
+#main_canvas
+{
+	background-color: transparent;
+	z-index: 10;
+}
+#template_canvas
+{
+	width: 180px;
+	height: 180px;
+	max-width: 180px;
+	max-height: 180px;
+	background-color: grey;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#roi_canvas
+{
+	visibility: hidden;
+	z-index: -10;
+}
+#similarity_panel
+{
+	text-align: left;
+}
+#aux_content
+{
+	width: 198px;
+	height: 200px;
+}
+#mini_manual
+{
+	border-top: 1px solid #0080C0;
+	width: 188px;
+	height: 200px;
+	padding: 5px;
+	font-size: 10px;
+	text-align: left;
+}
+
