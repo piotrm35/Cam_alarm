@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="robots" content="noindex" />
 		<meta name="author" content="Piotr Michałowski">
 		<meta name="email" content="piotrm35@hotmail.com">
 		<meta name="license" content="GNU General Public License version 3">
@@ -32,19 +33,22 @@
 					</tr>
 				</table>
 				<button onclick="clear_template_and_alarm()" >clear template and alarm</button>
+				<button id="stop_and_restore_watching_button" onclick="stop_and_restore_watching()" >stop and restore watching</button>
 			</div>
 			<div id="main_panel">
 				<video autoplay="true" id="video_input" class="v_input"></video>
 				<canvas id="main_canvas" class="v_input"></canvas>
-				<canvas id="roi_canvas" class="aux_canvas"></canvas>
+				<canvas id="roi_canvas"></canvas>
 			</div>
 			<div id="right_panel" class="side_panel">
 				<div id="aux_content">
 					<canvas id="template_canvas" class="aux_canvas"></canvas>
+					<canvas id="mask_canvas" class="aux_canvas"></canvas>
 				</div>
 				<div id="mini_manual">
 					How to start work:<br />
-					Mark on camera view a rectangle to proofe. When "similarity" will get fall beneath chosen "alarm threshold" the alam is turned on.<br />
+					Mark on camera view a rectangle to proof. When "similarity" will get fall beneath chosen "alarm threshold" the alam is turned on.<br />
+					One can mark on template window a mask (ignored region).<br />
 					<br />
 					Markings on the camera view:<br />
 					Blue rectangle - Your marked rectangle (a template to find).<br />

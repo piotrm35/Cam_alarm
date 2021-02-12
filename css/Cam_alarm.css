@@ -60,9 +60,14 @@ table
 }
 .aux_canvas
 {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 180px;
+	height: 180px;
+	max-width: 180px;
+	max-height: 180px;
+	margin-top: 10px;
 }
 
 #container
@@ -101,18 +106,23 @@ table
 }
 #template_canvas
 {
-	width: 180px;
-	height: 180px;
-	max-width: 180px;
-	max-height: 180px;
 	background-color: grey;
-	margin-top: 10px;
-	margin-bottom: 10px;
+}
+#mask_canvas
+{
+	background-color: transparent;
+	z-index: 10;
 }
 #roi_canvas
 {
+	display: block;
 	visibility: hidden;
 	z-index: -10;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 #similarity_panel
 {
@@ -120,8 +130,12 @@ table
 }
 #aux_content
 {
-	width: 198px;
+	position: relative;
+	width: 180px;
 	height: 200px;
+	max-width: 180px;
+	margin-left: auto;
+	margin-right: auto;
 }
 #mini_manual
 {
@@ -132,4 +146,3 @@ table
 	font-size: 10px;
 	text-align: left;
 }
-
